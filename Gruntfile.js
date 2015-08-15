@@ -13,10 +13,24 @@ module.exports = function(grunt) {
       dev: {
         options: {
           engine: 'im',
-          sizes: [{
+/*          sizes: [{
             width:800,
             suffix:'',
             quality:60
+          }]*/
+          sizes: [{
+            name: 'small',
+            width: 320,
+            height: 240
+          },{
+            name: 'medium',
+            width: 640
+          },{
+            name: "large",
+            width: 1024,
+            separator: "-"
+            suffix: "_x2",
+            quality: 0.6
           }]
         },
 
@@ -40,7 +54,8 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['images']
+          create: ['images'],
+          create: ['images/fixed']
         },
       },
     },
@@ -50,7 +65,7 @@ module.exports = function(grunt) {
       dev: {
         files: [{
           expand: true,
-          src: 'fixed/*.{gif,jpg,png}',
+          src: 'fixed/*.{svg,gif,jpg,png}',
           cwd: 'images_src/',
           dest: 'images/'
         }]
