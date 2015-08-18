@@ -1,12 +1,12 @@
 body {
     font-family: 'Lato', sans-serif;
     color: #747784;
-    font-weight:300;
+    font-weight: 300;
     background-color: #f4f7f8;
 }
 
 .text-muted {
-    color: #BCBBBB
+    color: #bcbbbb;
 }
 
 .text-thin {
@@ -18,14 +18,11 @@ body {
     font-size: 40px;
  }
 
- .title-logo {
+.title-logo {
     margin-top: 20px;
     max-height: 100px;
 }
 
 .container {
-	max-width: 960px;
+    max-width: 960px;
 }
-
-
-
